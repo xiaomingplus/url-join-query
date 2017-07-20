@@ -1,14 +1,18 @@
 This module can help you to combine queryString to url.
 
+支持添加query和hash
 # install
 
 ```
 npm i url-join-query -S
-```
-# usage
 
 ```
+# usage
+```
 var urlJoinQuery = require('url-join-query');
+
+// urlJoinQuery(baseUrl,query,hash);
+
 var url1 = "http://google.com?a=1&b=2&c=3#hash";
 var url2 = "http://google.com";
 
@@ -24,4 +28,8 @@ console.log(r3);//http://google.com/?d=4&e=5
 var r4 =urlJoinQuery(url2,{d:4,e:5,f:[6,7,8]});
 console.log(r4);//http://google.com/?d=4&e=5&f=6&f=7&f=8
 
+var r5 = urlJoinQuery(url3,{
+    xx3:3
+},"xx=22&www=33")
+console.log('r5',r5);
 ```

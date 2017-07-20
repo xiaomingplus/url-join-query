@@ -1,6 +1,6 @@
 {
   "name": "url-join-query",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Combine queryString to url",
   "main": "index.js",
   "scripts": {
